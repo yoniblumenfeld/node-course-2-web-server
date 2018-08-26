@@ -26,7 +26,11 @@ app.get('/', (req, res) => {
     });
 });
 
-
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs',{
+       pageTitle: 'Projects Page' 
+    });
+});
 app.use(bodyParser.json()); //might cause errors!!!
 app.post('/fighter',(req,res)=>{
     console.log(req.body); 
